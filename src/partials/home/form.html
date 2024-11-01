@@ -1,0 +1,74 @@
+<section id="contact" class="section__form topel white">
+  <div class="container">
+    <div class="section__titlecont">
+      <h2>Book a Call</h2>
+      <p>With an Expert</p>
+    </div>
+    <form method="POST" class="form__content submitForm flex">
+      <input type="hidden" name="form_subject" value="Submited form" />
+      <input type="hidden" name="admin_email" value="ivan.trachuk@fleximp.com" />
+      <label class="form__item">
+        <span class="form__label">First name</span>
+        <input
+          type="text"
+          name="firstname"
+          data-required="1"
+          placeholder="Type here"
+        />
+      </label>
+      <label class="form__item">
+        <span class="form__label">last name</span>
+        <input
+          type="text"
+          name="lasttname"
+          data-required="1"
+          placeholder="Type here"
+        />
+      </label>
+      <label class="form__item">
+        <span class="form__label">Company name</span>
+        <input type="text" name="companyname" placeholder="Type here" />
+      </label>
+      <label class="form__item">
+        <span class="form__label">Email address</span>
+        <input
+          type="email"
+          name="email"
+          data-required="1"
+          placeholder="Type here"
+        />
+      </label>
+      <label class="form__item">
+        <span class="form__label">Company Website URL</span>
+        <input type="url" name="website" placeholder="Type here" />
+      </label>
+      <label class="form__item">
+        <span class="form__label">Phone*</span>
+        <input type="tel" name="phone" placeholder="+38" />
+      </label>
+      <!-- <label class="form__item">
+        <span class="form__label">Preferred way of contact</span>
+        <div class="form__switcher">
+          <span class="selection"></span>
+          <div class="option">
+            <input type="radio" checked id="email" name="way" value="email" />
+            <label for="email"><span>Email</span></label>
+          </div>
+          <div class="option">
+            <input type="radio" id="phone" name="way" value="phone" />
+            <label for="phone"><span>Phone</span></label>
+          </div>
+        </div>
+      </label> -->
+      <label class="form__item full">
+        <span class="form__label">Message</span>
+        <textarea name="message" placeholder="Type here"></textarea>
+      </label>
+      <div class="form__bottom flex centerH">
+        <button class="button full black form__button" type="submit">
+          Book a demo
+        </button>
+      </div>
+    </form>
+  </div>
+</section>

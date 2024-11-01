@@ -1,0 +1,89 @@
+.section__searchtop {
+    padding-top: 7.5rem !important;
+
+    .blog__list {
+        margin-top: 4rem;
+    }
+}
+
+.search__top {
+    padding-top: 2.75rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+
+    h1 {
+        font-size: 4rem;
+        line-height: 5rem;
+        font-weight: 700;
+        color: var(--ct);
+    }
+
+    .search__form {
+        margin-top: 2.5rem;
+        width: 24.75rem;
+
+        input {
+            background-color: var(--cg);
+        }
+
+        button {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M19.4856 20.1545L13.2236 13.8925C12.7236 14.3185 12.1486 14.6482 11.4986 14.8815C10.8486 15.1149 10.1953 15.2315 9.53859 15.2315C7.93726 15.2315 6.58193 14.6772 5.47259 13.5685C4.36326 12.4592 3.80859 11.1042 3.80859 9.50353C3.80859 7.90286 4.36259 6.5472 5.47059 5.43653C6.57926 4.3252 7.93393 3.76953 9.53459 3.76953C11.1359 3.76953 12.4919 4.3242 13.6026 5.43353C14.7133 6.54286 15.2686 7.89853 15.2686 9.50053C15.2686 10.1952 15.1456 10.8675 14.8996 11.5175C14.6529 12.1675 14.3296 12.7235 13.9296 13.1855L20.1916 19.4465L19.4856 20.1545ZM9.53859 14.2305C10.8653 14.2305 11.9856 13.7739 12.8996 12.8605C13.8129 11.9472 14.2696 10.8269 14.2696 9.49953C14.2696 8.17286 13.8129 7.05286 12.8996 6.13953C11.9863 5.2262 10.8663 4.76953 9.53959 4.76953C8.21293 4.76953 7.09259 5.2262 6.17859 6.13953C5.26526 7.05286 4.80859 8.17286 4.80859 9.49953C4.80859 10.8262 5.26526 11.9462 6.17859 12.8595C7.09193 13.7729 8.21193 14.2305 9.53859 14.2305Z' fill='%23888888'/%3E%3C/svg%3E");
+        }
+    }
+}
+
+.notfound {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    max-width: 61.25rem;
+    margin-top: 2.5rem;
+    font-weight: 600;
+    color: var(--ct);
+
+    & + .search__form {
+        margin-top: 1.5rem;
+    }
+}
+
+.search__res {
+    font-size: 2.5rem;
+    max-width: 48.2rem;
+    margin-top: 2rem;
+    line-height: 130%;
+    font-weight: 800;
+    width: 100%;
+    color: var(--cd);
+}
+
+@media screen and (max-width: 1024px) {
+    .searchPage {
+        .main {
+            padding-bottom: 7rem;
+        }
+    }
+    .section__searchtop {
+        padding-top: 7.12rem !important;
+        .blog__list {
+            margin-top: 3.5rem;
+        }
+    }
+    .search__top {
+        padding-top: 2rem;
+        h1 {
+            font-size: 2rem;
+            line-height: 3rem;
+        }
+        .search__form {
+            margin-top: 2rem;
+            width: 24.75rem;
+        }
+    }
+    .search__res {
+        font-size: 1.25rem;
+        max-width: 21.6rem;
+        margin-top: 1.5rem;
+    }
+}

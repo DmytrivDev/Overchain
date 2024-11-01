@@ -1,0 +1,255 @@
+.blogPage {
+    .main {
+        overflow: visible;
+        z-index: 11;
+    }
+
+    .section__form {
+        padding-bottom: 9rem !important;
+    }
+}
+
+.section__form {
+    z-index: 20;
+
+    .container {
+        position: relative;
+        z-index: 12;
+    }
+
+    &:not(.white) {
+        .form__content {
+            position: relative;
+
+            &::after {
+                width: 26.5rem;
+                height: 26.4375rem;
+                top: 2.2rem;
+                left: 50%;
+                transform: translateX(-50%);
+                opacity: 0.48;
+                background: #28ffb2;
+                filter: blur(18.75em);
+                border-radius: 50%;
+                content: "";
+                position: absolute;
+            }
+        }
+    }
+}
+
+.form__content {
+    max-width: 51em;
+    gap: 1.5em;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 3em;
+}
+
+.form__item {
+    width: calc(50% - 0.75em);
+    position: relative;
+    z-index: 5;
+
+    &.full {
+        width: 100%;
+    }
+
+    input,
+    textarea {
+        font-size: 1.125rem;
+        padding: 0 1.5rem;
+        height: 3.5rem;
+        border-radius: 0.75rem;
+        background: var(--cg);
+        display: block;
+        width: 100%;
+        font-family: var(--ff);
+        border: 2px solid transparent;
+        transition: 0.3s;
+
+        &.error {
+            border-color: var(--cr);
+        }
+    }
+
+    textarea {
+        padding-top: 1rem;
+        height: 6.5rem;
+        resize: none;
+    }
+}
+
+.form__label {
+    font-size: 0.875rem;
+    padding-bottom: 0.25rem;
+    font-weight: 800;
+    display: block;
+}
+
+.form__bottom {
+    padding-top: 1.5em;
+    width: 100%;
+}
+
+.form__button {
+    max-width: 12rem;
+    width: 100%;
+}
+
+.form__switcher {
+    border-radius: 0.75rem;
+    padding: 0.25rem;
+    height: 3.5rem;
+    background-color: var(--cg);
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    * {
+        cursor: pointer;
+    }
+}
+.form__switcher .option {
+    position: relative;
+    cursor: pointer;
+}
+.form__switcher .option label {
+    font-size: 1.125rem;
+    font-weight: 500;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+.form__switcher .option label::before {
+    left: 0;
+    transform: translateX(-0.25em);
+}
+.form__switcher .option label::after {
+    right: 0;
+    transform: translateX(0.25em);
+}
+.form__switcher .option:first-of-type {
+    grid-column: 1;
+    grid-row: 1;
+    box-shadow: none;
+}
+.form__switcher .option:first-of-type label::before {
+    opacity: 0;
+}
+.form__switcher .option:last-of-type label::after {
+    opacity: 0;
+}
+.form__switcher .option input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    opacity: 0;
+}
+.form__switcher .selection {
+    border-radius: 0.75rem;
+    background: var(--cd);
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 2;
+    will-change: transform;
+    -webkit-transition: transform 0.2s ease;
+    transition: transform 0.2s ease;
+    overflow: hidden;
+    &::after {
+        width: 6.6875rem;
+        height: 7.1875rem;
+        filter: blur(8em);
+        left: -2.06em;
+        top: 50%;
+        transform: translateY(-50%);
+        fill: #28ffb2;
+        content: "";
+        position: absolute;
+    }
+}
+.form__switcher .option label span {
+    display: block;
+    position: relative;
+    z-index: 2;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    color: #888;
+}
+.form__switcher .option input:checked + label span,
+.form__switcher .option input:checked + label::before,
+.form__switcher .option input:checked + label::after {
+    color: var(--cw) !important;
+}
+.form__switcher .option input:checked + label {
+    cursor: default;
+}
+
+@media screen and (max-width: 1024px) {
+    .blogPage {
+        .section__form {
+            padding-bottom: 7rem !important;
+        }
+    }
+    .section__form {
+        padding-top: 1.5rem;
+        padding-bottom: 7em !important;
+        &:not(.white) {
+            .form__content {
+                &::after {
+                    width: 29rem;
+                    height: 35.5rem;
+                    top: 5.3rem;
+                }
+            }
+        }
+    }
+    .form__content {
+        gap: 1em;
+        margin-top: 2em;
+    }
+    .form__item {
+        width: calc(50% - 0.5em);
+        input,
+        textarea {
+            font-size: 1rem;
+        }
+        textarea {
+            height: 11.25rem;
+        }
+    }
+    .form__label {
+        font-size: 0.75rem;
+        padding-bottom: 0.5rem;
+        display: block;
+    }
+    .form__button {
+        max-width: 13.75rem;
+    }
+    .form__switcher .option label {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .form__item {
+        width: 100%;
+    }
+}

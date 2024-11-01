@@ -1,0 +1,61 @@
+/* Settings */
+@import url("./settings/default.scss");
+@import url("./settings/variables.scss");
+@import url("./settings/fonts.scss");
+@import url("./settings/general.scss");
+
+/* Header */
+@import url("./sections/header/header.scss");
+
+/* Home */
+@import url("./sections/home/main.scss");
+@import url("./sections/home/expand.scss");
+@import url("./sections/home/getway.scss");
+@import url("./sections/home/complate.scss");
+@import url("./sections/home/fast.scss");
+@import url("./sections/home/manage.scss");
+@import url("./sections/home/instant.scss");
+@import url("./sections/home/expert.scss");
+@import url("./sections/home/challenge.scss");
+@import url("./sections/home/form.scss");
+
+/* Text */
+@import url("./sections/text/text.scss");
+
+/* Footer */
+@import url("./sections/footer/footer.scss");
+
+/* Popup */
+@import url("./sections/elements/popup.scss");
+
+/* Blog */
+@import url("./sections/blog/blogtop.scss");
+@import url("./sections/blog/blog.scss");
+
+/* Article */
+@import url("./sections/article/article.scss");
+@import url("./sections/elements/embed.scss");
+@import url("./sections/article/author.scss");
+
+/* Payment */
+@import url("./sections/payment/paymain.scss");
+@import url("./sections/payment/accept.scss");
+@import url("./sections/payment/convers.scss");
+@import url("./sections/payment/solution.scss");
+@import url("./sections/payment/security.scss");
+@import url("./sections/payment/starting.scss");
+@import url("./sections/payment/chose.scss");
+@import url("./sections/payment/faq.scss");
+
+/* Coin */
+@import url("./sections/coin/maincoin.scss");
+@import url("./sections/coin/business.scss");
+
+
+/* Search */
+@import url("./sections/search/search.scss");
+@import url("./sections/search/related.scss");
+@import url("./sections/search/benefits.scss");
+
+/* Error */
+@import url("./sections/error/error.scss");

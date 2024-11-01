@@ -1,0 +1,28 @@
+.related__car {
+    .splide__track {
+        border-radius: 1.5rem 1.5rem 0 0;
+        overflow: hidden;
+    }
+}
+
+.related__bottom {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+
+    .button {
+        max-width: 11.925rem;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .related__car {
+        .splide__track {
+            overflow: visible;
+        }
+    }
+    .related__bottom {
+        margin-top: 2.5rem;
+    }
+}

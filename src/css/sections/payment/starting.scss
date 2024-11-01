@@ -1,0 +1,114 @@
+.starting__list {
+    margin-top: 2.5rem;
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.starting__item {
+    padding: 2.5rem 2rem;
+    border-radius: 1.5rem;
+    background: rgba(0, 62, 67, 0.4);
+    overflow: hidden;
+    position: relative;
+
+    * {
+        transition: 0.3s;
+        position: relative;
+    }
+
+    .num {
+        font-size: 3rem;
+        line-height: 2.5rem;
+        color: var(--cz);
+        opacity: 0.2;
+        font-weight: 600;
+    }
+
+    .name {
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        color: var(--cw);
+        font-weight: 600;
+    }
+
+    .desc {
+        margin-top: 1rem;
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+
+    &::before {
+        width: 20rem;
+        height: 20rem;
+        top: -7.75rem;
+        right: -5.87rem;
+        content: "";
+        border-radius: 50%;
+        opacity: 0.48;
+        background: #28ffb2;
+        filter: blur(12.5em);
+        position: absolute;
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    &:hover {
+        .num {
+            opacity: 1;
+        }
+
+        .name {
+            color: var(--cz);
+        }
+
+        .desc {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        &::before {
+            opacity: 1;
+        }
+    }
+}
+
+.starting__bottom {
+    margin-top: 4rem;
+    justify-content: center;
+
+    .button {
+        max-width: 13.625rem;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .starting__list {
+        display: flex;
+        margin-left: -1rem;
+        margin-right: -1rem;
+        padding: 0 1rem;
+        overflow: auto;
+        display: flex;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        z-index: 2;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    .starting__item {
+        padding: 2.5rem 1.5rem;
+        width: 19.375rem;
+        min-width: 19.375rem;
+        &::before {
+            top: -7.75rem;
+            right: -4.94rem;
+        }
+    }
+    .starting__bottom {
+        margin-top: 2.5rem;
+    }
+}

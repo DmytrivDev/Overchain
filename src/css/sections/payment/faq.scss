@@ -1,0 +1,107 @@
+.faq__list {
+    margin-top: 2.5rem;
+    gap: 2.5rem;
+    display: flex;
+    flex-direction: column;
+
+    * {
+        font-family: var(--ff) !important;
+        opacity: 1 !important;
+        color: var(--ct) !important;
+        max-width: inherit !important;
+    }
+
+    .faq__item {
+        border: none;
+        padding: 0;
+        margin: 0;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid var(--cg);
+
+        &.is-active {
+            .ac-header {
+                .ac-trigger {
+                    &::after {
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M21.375 12C21.375 12.2984 21.2565 12.5845 21.0455 12.7955C20.8345 13.0065 20.5484 13.125 20.25 13.125H3.75C3.45163 13.125 3.16548 13.0065 2.9545 12.7955C2.74353 12.5845 2.625 12.2984 2.625 12C2.625 11.7016 2.74353 11.4155 2.9545 11.2045C3.16548 10.9935 3.45163 10.875 3.75 10.875H20.25C20.5484 10.875 20.8345 10.9935 21.0455 11.2045C21.2565 11.4155 21.375 11.7016 21.375 12Z' fill='black'/%3E%3C/svg%3E");                    }
+                }
+            }
+        }
+
+        .ac-header {
+            padding: 0;
+            margin: 0;
+
+            .ac-trigger {
+                font-size: 1.5rem;
+                line-height: 2rem;
+                margin: 0;
+                padding: 0;
+                padding-right: 4rem;
+                font-weight: 700;
+                position: relative;
+                color: var(--ct) !important;
+
+                &::after {
+                    width: 3rem;
+                    height: 3rem;
+                    background-size: 1.5rem;
+                    border-radius: 50%;
+                    font-size: 0;
+                    right: 0;
+                    top: 50%;
+                    transform: translate(0 -50%);
+                    background-color: var(--cz);
+                    transition: 0.3s;
+                    position: absolute;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M21.375 12C21.375 12.2984 21.2565 12.5845 21.0455 12.7955C20.8345 13.0065 20.5484 13.125 20.25 13.125H13.125V20.25C13.125 20.5484 13.0065 20.8345 12.7955 21.0455C12.5845 21.2565 12.2984 21.375 12 21.375C11.7016 21.375 11.4155 21.2565 11.2045 21.0455C10.9935 20.8345 10.875 20.5484 10.875 20.25V13.125H3.75C3.45163 13.125 3.16548 13.0065 2.9545 12.7955C2.74353 12.5845 2.625 12.2984 2.625 12C2.625 11.7016 2.74353 11.4155 2.9545 11.2045C3.16548 10.9935 3.45163 10.875 3.75 10.875H10.875V3.75C10.875 3.45163 10.9935 3.16548 11.2045 2.9545C11.4155 2.74353 11.7016 2.625 12 2.625C12.2984 2.625 12.5845 2.74353 12.7955 2.9545C13.0065 3.16548 13.125 3.45163 13.125 3.75V10.875H20.25C20.5484 10.875 20.8345 10.9935 21.0455 11.2045C21.2565 11.4155 21.375 11.7016 21.375 12Z' fill='black'/%3E%3C/svg%3E");
+                }
+            }
+        }
+
+        .ac-panel {
+            text-align: left;
+            padding: 0;
+            margin: 0;
+
+            .ac-text {
+                padding: 0;
+                margin: 0;
+                padding-top: 2rem;
+                text-align: left;
+                font-family: var(--ff) !important;
+                font-size: 1.125rem !important;
+                line-height: 1.4 !important;
+                max-width: inherit !important;
+
+                & > * {
+                    margin-bottom: 1rem;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+                * {
+                    margin-top: 0 !important
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .faq__list {
+        gap: 2rem;
+        .faq__item {
+            .ac-panel {
+                .ac-text {
+                    padding-top: 2.5rem;
+                    font-size: 1rem !important;
+                }
+            }
+        }
+    }
+}

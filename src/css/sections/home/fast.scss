@@ -1,0 +1,204 @@
+.fast__section {
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -1px;
+        height: 2px;
+        background-color: var(--cw);
+    }
+
+    .fast__item {
+        border-radius: 1.5rem;
+        min-height: 16em;
+        padding: 2em 1.5em;
+        background-color: var(--ct);
+        color: var(--cw);
+        position: relative;
+        overflow: hidden;
+
+        &::after {
+            width: 13.0625rem;
+            height: 37rem;
+            border-radius: 50%;
+            right: 50%;
+            transform: translateY(-50%);
+            right: -2.19em;
+            filter: blur(12.5em);
+            background: var(--cz);
+            content: "";
+            position: absolute;
+        }
+    }
+
+    .fast__cont {
+        max-width: 23.5em;
+        position: relative;
+        z-index: 3;
+
+        h4 {
+            font-weight: 700;
+        }
+
+        p {
+            margin-top: 1rem;
+        }
+    }
+
+    .fast__img {
+        position: absolute;
+        height: auto;
+        z-index: 2;
+
+        &.img1 {
+            width: 20.25rem;
+            height: 20.25rem;
+            top: -1.12em;
+            right: -3em;
+        }
+
+        &.img2 {
+            width: 12.0625rem;
+            height: 12.0625rem;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 1rem;
+        }
+
+        &.img3 {
+            width: 25.11344rem;
+            height: 25.11344rem;
+            transform: rotate(-4.547deg);
+            top: -0.94em;
+            right: -4.67em;
+        }
+
+        &.img4 {
+            width: 14.6875rem;
+            height: 14.6875rem;
+            top: 0.69em;
+            right: -0.75em;
+        }
+    }
+
+    .fast__bottom {
+        margin-top: 4em;
+    }
+
+    .fast__button {
+        max-width: 12rem;
+        width: 100%;
+    }
+
+    @media screen and (min-width: 761px) {
+        .fast__list {
+            gap: 1rem;
+            grid-template-columns: 1fr 1fr;
+            display: grid;
+            margin-top: 3em;
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        .fast__car {
+            overflow: visible;
+            margin-top: 2rem;
+            .splide__track {
+                overflow: visible;
+            }
+            .splide__pagination {
+                padding-top: 1.5rem;
+                gap: 1rem;
+                position: static;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                align-content: center;
+                li {
+                    button {
+                        height: 0.5rem !important;
+                        border-radius: 0.5rem;
+                        padding: 0 !important;
+                        margin: 0 !important;
+                        background-color: var(--cd) !important;
+                        opacity: 0.5;
+                        transform: none !important;
+                        transition: 0.3s;
+                        &.is-active {
+                            width: 8.75rem;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        .fast__item {
+            border-radius: 2rem;
+            padding: 2em 1em;
+            padding-top: 14.6em;
+            min-height: inherit;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            background-color: var(--ct);
+
+            &::after {
+                width: 24.5rem;
+                height: 24.5rem;
+                top: -9.25em;
+                left: -8.19em;
+                filter: blur(12.5em);
+                background: var(--cz);
+                content: "";
+                position: absolute;
+            }
+        }
+        .fast__cont {
+            max-width: inherit;
+            width: 100%;
+        }
+        .fast__img {
+            &.img1 {
+                width: 20.25rem;
+                height: 20.25rem;
+                top: -2.5em;
+                left: -3.13em;
+            }
+            &.img2 {
+                width: 12.0625rem;
+                height: 12.0625rem;
+                top: 0.56em;
+                left: 0;
+                transform: none;
+            }
+            &.img3 {
+                width: 25.11344rem;
+                height: 25.11344rem;
+                transform: rotate(86.546deg);
+                top: -6.58em;
+                left: -7.83em;
+            }
+
+            &.img4 {
+                width: 18.1875rem;
+                height: 18.1875rem;
+                top: -1.5em;
+                left: -1rem;
+            }
+        }
+        .fast__bottom {
+            margin-top: 2.5em;
+        }
+        .fast__button {
+            max-width: 13.75rem;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .fast__section {
+        padding-top: 1.5rem;
+    }
+}

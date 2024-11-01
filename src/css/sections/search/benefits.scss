@@ -1,0 +1,55 @@
+.section__benefits {
+    padding: 5rem 0 !important;
+    position: relative;
+    overflow: hidden;
+
+    &:last-child {
+        margin-bottom: 9rem !important;
+    }
+}
+
+.benefits__content {
+    max-width: 50rem;
+
+    h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        line-height: 130%;
+    }
+
+    p {
+        margin-top: 1.5rem;
+    }
+
+    .button {
+        margin-top: 4rem;
+        max-width: 13.625rem;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .section__benefits {
+        padding: 3rem 0 !important;
+        &:last-child {
+            margin-bottom: 7rem !important;
+        }
+    }
+    .benefits__content {  
+        text-align: center;  
+        h2 {
+            font-size: 1.25rem;
+            line-height: 1.5;
+            padding-right: 1.5rem;
+            text-align: left;
+        }
+        p {
+            font-size: 1rem;
+            text-align: left;
+        }
+    
+        .button {
+            margin-top: 2.5rem;
+        }
+    }
+}

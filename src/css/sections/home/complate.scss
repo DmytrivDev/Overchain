@@ -1,0 +1,219 @@
+.section__complate {
+    .container {
+        position: relative;
+        z-index: 15;
+    }
+
+    .section__titlecont {
+        max-width: 48.25rem;
+    }
+
+    &.payComplete {
+        .complate__decor {
+            width: 43.25rem;
+            height: 43.25rem;
+            top: -1.28rem;
+            left: -5.37rem;
+        }
+    }
+}
+
+.complate__content {
+    padding-left: 39em;
+    position: relative;
+}
+
+.complate__list {
+    margin-top: 2.5rem;
+    max-width: 38rem;
+    position: relative;
+    z-index: 3;
+
+    li {
+        padding-bottom: 1.5em;
+        margin-bottom: 1.5em;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+
+        &:last-child {
+            border: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        h4 {
+            padding-left: 1.5rem;
+            position: relative;
+
+            &::before {
+                width: 0.75rem;
+                height: 0.75rem;
+                border: 3px solid var(--cz);
+                left: 0;
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                border-radius: 50%;
+                box-sizing: border-box;
+            }
+        }
+
+        p {
+            margin-top: 1rem;
+            font-size: 1.125rem;
+            line-height: 1.5rem;
+            font-weight: 400;
+        }
+    }
+}
+
+.complate__button {
+    margin-top: 4rem;
+    max-width: 12rem;
+    width: 100%;
+    position: relative;
+    z-index: 3;
+}
+
+.complate__decor {
+    width: 62.875rem;
+    height: 54.49169rem;
+    left: -15.06em;
+    top: -1rem;
+    position: absolute;
+
+    img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: relative;
+        z-index: 2;
+    }
+
+    &::before {
+        width: 40.875rem;
+        height: 40.875rem;
+        top: 5.5em;
+        left: -5.94em;
+        filter: blur(18.75em);
+        opacity: 0.48;
+        background: var(--cz);
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+    }
+}
+
+.complate__bottom {
+    margin-top: 4.88rem;
+    width: 100%;
+    gap: 8.3rem;
+    justify-content: center;
+
+    &:last-child {
+        display: none;
+    }
+
+    img {
+        max-width: 15rem;
+        max-height: 5rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .section__complate {
+        .section__titlecont {
+            text-align: center;
+        }
+        &.payComplete {
+            .complate__decor {
+                width: 29rem;
+                height: 29rem;
+                top: 4.5rem;
+                left: -17rem;
+                display: block;
+                &::before {
+                    width: 100%;
+                    height: 100%;
+                }
+                img {
+                    display: none;
+                }
+            }
+        }
+    }
+    .complate__content {
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+    }
+    .complate__list {
+        margin-top: 2.5em;
+        max-width: inherit;
+        li {
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+    .complate__button {
+        margin-top: 2.5rem;
+        max-width: 13.75rem;
+        position: relative;
+        z-index: 5;
+    }
+    .complate__decor {
+        display: none;
+    }
+    .complate__bottom {
+        margin-top: 4rem;
+        gap: 4rem;
+        img {
+            max-width: 12rem;
+            max-height: 3.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .section__complate {
+        overflow: hidden;
+    }
+    .complete__main {
+        display: flex;
+        width: 100%;
+    }
+    .complate__bottom {
+        gap: 7.5rem;
+        padding-right: 7.5rem;
+        white-space: nowrap;
+        flex-wrap: nowrap;
+        display: flex !important;
+        will-change: transform;
+        width: auto;
+        img {
+            max-width: 15rem;
+            max-height: 5rem;
+        }
+    }
+    @keyframes animate {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    @keyframes animate2 {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-200%);
+        }
+    }
+}
