@@ -113,6 +113,9 @@
         width: 100%;
         ul {
             gap: 2em;
+            a {
+                font-size: 1.126rem !important;
+            }
         }
     }
     .footer__soc {

@@ -1,0 +1,50 @@
+.section__convert {
+    .section__titlecont {
+        p {
+            max-width: 48.125rem;
+        }
+    }
+}
+
+.convert__list {
+    margin: 0 auto;
+    margin-top: 4rem;
+    gap: 4rem;
+    max-width: 62rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.convert__item {
+    width: 8.75rem;
+    height: 8.75rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: relative;
+    background: linear-gradient(133deg, #003e43 -20.24%, #28ffb2 150.24%);
+
+    img {
+        max-width: 6rem;
+        max-height: 6rem;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .convert__list {
+        margin-top: 3rem;
+        gap: 2.19rem;
+    }
+    .convert__item {
+        width: 6rem;
+        height: 6rem;
+        img {
+            max-width: 4.5rem;
+            max-height: 4.5rem;
+        }
+    }
+}

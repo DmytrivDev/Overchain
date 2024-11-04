@@ -50,6 +50,7 @@
 /* Coin */
 @import url("./sections/coin/maincoin.scss");
 @import url("./sections/coin/business.scss");
+@import url("./sections/coin/convert.scss");
 
 
 /* Search */

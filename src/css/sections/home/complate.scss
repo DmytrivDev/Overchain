@@ -166,7 +166,21 @@
         z-index: 5;
     }
     .complate__decor {
-        display: none;
+        width: 24.46163rem;
+        height: 24.46163rem;
+        top: 3.25rem;
+        right: -19.96rem;
+        left: auto;
+        &::before {
+            width: 100%;
+            height: 100%;
+            opacity: 0.48;
+            background: var(--cz);
+            filter: blur(11.221rem);
+        }
+        img {
+            display: none;
+        }
     }
     .complate__bottom {
         margin-top: 4rem;
