@@ -9,6 +9,7 @@ import './parts/related'
 import './parts/accept'
 import './parts/convers'
 import './parts/faq'
+import './parts/ultimate'
  
 headerFunc();
 formFunc();
