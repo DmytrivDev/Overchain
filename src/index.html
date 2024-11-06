@@ -10,20 +10,54 @@
   <body>
     <load="partials/header/header.html" />
  
-    <main class="main"> 
-      <load="partials/home/main.html" />
-      <load="partials/home/expand.html" />
-      <load="partials/home/getway.html" />
-      <load="partials/home/complate.html" />
-      <load="partials/home/fast.html" />
-      <load="partials/home/manage.html" />
-      <load="partials/home/instant.html" />
-      <load="partials/home/expert.html" />
-      <load="partials/home/challenge.html" />
-      <load="partials/home/form.html" />
+    <main class="main">
+      <div class="stpart st1">
+        <div class="strpartcont">
+          <load="partials/home/main.html" />
+          <load="partials/home/expand.html" />
+        </div>
+      </div>
+      <div class="stpart st2">
+        <div class="strpartcont topel white">
+          <load="partials/home/getway.html" />
+        </div>
+      </div>
+      <div class="stpart st3">
+        <div class="strpartcont topel">
+          <load="partials/home/complate.html" />
+        </div>
+      </div>
+      <div class="stpart st4">
+        <div class="strpartcont topel white">
+          <load="partials/home/fast.html" />
+          <load="partials/home/manage.html" />
+        </div>
+      </div>
+      <div class="stpart st5">
+        <div class="strpartcont topel">
+          <load="partials/home/instant.html" />
+          <load="partials/home/expert.html" />
+          <load="partials/home/challenge.html" />
+        </div>
+      </div>
+      <div class="stpart st6">
+        <div class="strpartcont topel white">
+          <load="partials/home/form.html" />
+        </div>
+      </div>
+      <div class="stpart st7">
+        <div class="strpartcont topel">
+          <load="partials/footer/footer.html" />
+        </div>
+      </div>
     </main>
 
-    <load="partials/footer/footer.html" />
+    <style>
+        .stpart:first-child {
+          overflow: hidden;;
+        }
+    </style>
+
     <script type="module" src="./js/main.js"></script>
   </body>
 </html>

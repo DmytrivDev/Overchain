@@ -24,13 +24,64 @@ body {
     position: relative;
 }
 
+body,
+html,
 .main {
+    overflow: visible !important;
+}
+
+.main {
+    position: relative;
+    .stpart {
+        position: sticky;
+        top: 0;
+        z-index: 1 !important;
+
+        .strpartcont {
+            position: relative;
+            z-index: 1 !important;
+        }
+    }
+
     section {
         &:last-child {
             padding-bottom: 14em;
         }
     }
 }
+
+/*
+body,
+html,
+.main {
+    overflow: visible !important;
+}
+
+.main {
+    overflow: hidden !important;
+    height: 100%;
+}
+
+.main {
+    position: relative;
+    .stpart {
+        position: fixed;
+        top: 100%;
+        transform: translateY(3rem);
+        width: 100%;
+
+        &:first-child {
+            top: 0 !important;
+            transform: translateY(0);
+        }
+    }
+
+    section {
+        &:last-child {
+            padding-bottom: 14em;
+        }
+    }
+} */
 
 .button {
     font-size: 0.875rem;
@@ -409,7 +460,7 @@ section {
             margin-top: -2rem;
         }
         &.topel {
-            padding-top: .5rem;
+            padding-top: 0.5rem;
         }
     }
     .more__btn {

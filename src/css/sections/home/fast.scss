@@ -1,4 +1,6 @@
 .fast__section {
+    overflow: hidden !important;
+    
     &::after {
         content: "";
         position: absolute;

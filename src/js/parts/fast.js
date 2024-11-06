@@ -25,6 +25,8 @@ function checkWidthCases(carousell, splide) {
   const ww = window.innerWidth;
   const carList = carousell.querySelector('.fast__list');
 
+  console.log(ww)
+
   if (ww < 761) {
     carList.classList.add('splide__list');
     splide.mount();

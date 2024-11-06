@@ -1,4 +1,5 @@
 import { headerFunc } from "./parts/header";
+import './parts/scroll'
 import { formFunc } from "./parts/form";
 import { embedFunc } from "./parts/embed";
 import './parts/getways'
