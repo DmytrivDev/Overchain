@@ -53,6 +53,10 @@
 @import url("./sections/coin/convert.scss");
 @import url("./sections/coin/ultimate.scss");
 
+/* Solution */
+@import url("./sections/solution/first.scss");
+@import url("./sections/solution/double.scss");
+
 
 /* Search */
 @import url("./sections/search/search.scss");

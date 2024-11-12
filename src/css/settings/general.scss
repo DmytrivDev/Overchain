@@ -24,6 +24,7 @@ body {
     position: relative;
 }
 
+/*
 body,
 html,
 .main {
@@ -46,6 +47,17 @@ html,
     section {
         &:last-child {
             padding-bottom: 14em;
+        }
+    }
+}
+*/
+
+.main {
+    .stpart {
+        z-index: 1 !important;
+        .strpartcont {
+            position: relative;
+            z-index: 1 !important;
         }
     }
 }

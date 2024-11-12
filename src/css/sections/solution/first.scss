@@ -1,0 +1,131 @@
+.section__first {
+    padding-top: 10rem !important;
+    padding-bottom: 10.25rem !important;
+    position: relative;
+    background-color: #000;
+    background-color: #000 !important;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        z-index: 2;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    &::after {
+        height: 19.2rem;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #101010 100%);
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 3;
+    }
+
+    .sircle__fs {
+        width: 49.875rem;
+        height: 49.875rem;
+        top: -27.87rem;
+        left: -29.44rem;
+        border-radius: 49.875rem;
+        background: var(--cz);
+        filter: blur(12.5rem);
+        z-index: 1;
+        position: absolute;
+    }
+}
+
+.first__content {
+    max-width: 70rem;
+    position: relative;
+    z-index: 5;
+
+    h1 {
+        font-size: 5rem;
+        line-height: 6rem;
+        font-weight: 700;
+    }
+
+    .button {
+        max-width: 13.635rem;
+        margin-top: 4rem;
+        width: 100%;
+    }
+}
+
+.first__desc {
+    max-width: 44.5rem;
+    margin-top: 1.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .section__first {
+        padding-top: 10.72rem !important;
+        padding-bottom: 14.62rem !important;
+        &::after {
+            height: 12rem;
+        }
+        .sircle__fs {
+            width: 32rem;
+            height: 32rem;
+            top: -18rem;
+            left: -16rem;
+        }
+    }
+    .first__content {
+        h1 {
+            font-size: 2.375rem;
+            line-height: 3rem;
+        }
+        .button {
+            margin-top: 2.5rem;
+        }
+    }
+    .first__desc {
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .section__first {
+        padding-bottom: 17rem !important;
+        &::before {
+            z-index: 2;
+            background: linear-gradient(270deg, rgba(0, 0, 0, 0.00) 52.78%, #000 100%);
+        }
+        &::after {
+            height: 19.2rem;
+            z-index: 2;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #101010 100%);
+        }
+        .cover {
+            width: 42rem;
+            height: auto;
+            vertical-align: top;
+            bottom: 0;
+            transform: none;
+            background-color: var(--ct);
+            top: inherit;
+            left: inherit;
+            right: 0;
+            z-index: 1;
+        }
+        .sircle__fs {
+            display: none;
+        }
+    }
+    .first__content {
+        text-align: center;
+        * {
+            text-align: left;
+        }
+        a {
+            text-align: center;
+        }
+    }
+}

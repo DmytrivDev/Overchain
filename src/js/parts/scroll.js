@@ -1,34 +1,34 @@
-document.addEventListener('scroll', function() {
-    const sections = document.querySelectorAll('.stpart');
-    const viewportHeight = window.innerHeight;
-    const scrollProgress = document.documentElement.scrollTop;
+// document.addEventListener('scroll', function() {
+//     const sections = document.querySelectorAll('.stpart');
+//     const viewportHeight = window.innerHeight;
+//     const scrollProgress = document.documentElement.scrollTop;
 
-    sections.forEach((section, index) => {
-        const sec = section.querySelector('.strpartcont');
-        const rect = section.getBoundingClientRect();
-        const sectionHeight = rect.height;
-        const topPos = scrollProgress - getPreviousElementsHeight(section);
-        const border = sectionHeight - viewportHeight;
+//     sections.forEach((section, index) => {
+//         const sec = section.querySelector('.strpartcont');
+//         const rect = section.getBoundingClientRect();
+//         const sectionHeight = rect.height;
+//         const topPos = scrollProgress - getPreviousElementsHeight(section);
+//         const border = sectionHeight - viewportHeight;
 
-        // Під час скролу ми перевіряємо лише один раз висоту попередніх елементів і положення
-        if (rect.top === 0 && border > topPos) {
-            sec.style.transform = `translateY(-${topPos}px)`;
-        }
-    });
-});
+//         // Під час скролу ми перевіряємо лише один раз висоту попередніх елементів і положення
+//         if (rect.top === 0 && border > topPos) {
+//             sec.style.transform = `translateY(-${topPos}px)`;
+//         }
+//     });
+// });
 
-function getPreviousElementsHeight(element) {
-    let totalHeight = 0;
-    let currentElement = element.previousElementSibling;
+// function getPreviousElementsHeight(element) {
+//     let totalHeight = 0;
+//     let currentElement = element.previousElementSibling;
 
-    // Обчислюємо висоту лише один раз для кожного елемента
-    while (currentElement) {
-        totalHeight += currentElement.offsetHeight;
-        currentElement = currentElement.previousElementSibling;
-    }
+//     // Обчислюємо висоту лише один раз для кожного елемента
+//     while (currentElement) {
+//         totalHeight += currentElement.offsetHeight;
+//         currentElement = currentElement.previousElementSibling;
+//     }
 
-    return totalHeight;
-}
+//     return totalHeight;
+// }
 
 
 // const sections = document.querySelectorAll('.stpart');
