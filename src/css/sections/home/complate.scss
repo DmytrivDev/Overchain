@@ -1,5 +1,4 @@
 .section__complate {
-    overflow: hidden !important;
     .container {
         position: relative;
         z-index: 15;
@@ -63,7 +62,7 @@
             margin-top: 1rem;
             font-size: 1.125rem;
             line-height: 1.5rem;
-            font-weight: 400;
+            font-weight: 300;
         }
     }
 }
@@ -82,6 +81,20 @@
     left: -15.06em;
     top: -1rem;
     position: absolute;
+
+    &.solution {
+        width: 50rem;
+        height: 40.625rem;
+        left: -12.75rem;
+        top: 0;
+
+        &::before {
+            width: 46.79281rem;
+            height: 46.79281rem;
+            top: -0.93rem;
+            left: -15.19rem;
+        }
+    }
 
     img {
         width: 100%;
@@ -172,6 +185,9 @@
         top: 3.25rem;
         right: -19.96rem;
         left: auto;
+        &.solution {
+            display: none;
+        }
         &::before {
             width: 100%;
             height: 100%;

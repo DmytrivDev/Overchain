@@ -1,52 +1,76 @@
-.double__section {
-    padding-top: 6em !important;
-}
-
 .double__list {
     margin-top: 4rem;
     gap: 1rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-}
 
-.double__item {
-    border-radius: 1.5rem;
-    min-height: 18.75rem;
-    padding: 2rem;
-    background-color: var(--cd);
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: flex-end;
-    align-content: flex-end;
+    &.type2 {
+        .double__item {
+            gap: 1.5rem;
+            border-radius: 2rem;
+            min-height: 17rem;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            align-content: flex-start;
 
-    h3 {
-        max-width: 30rem;
-        font-size: 2rem;
-        line-height: 2.5rem;
-        font-weight: 700;
+            &::after {
+                display: none;
+            }
+
+            p {
+                max-width: 30rem;
+                margin: 0;
+            }
+
+            img {
+                width: 10rem;
+                height: auto;
+                top: 0;
+                right: 0;
+            }
+        }
+    }
+
+    .double__item {
+        border-radius: 1.5rem;
+        min-height: 18.75rem;
+        padding: 2rem !important;
+        background-color: var(--cd);
         position: relative;
-        z-index: 2;
-    }
-
-    &::after {
-        width: 19.4375rem;
-        height: 19.4375rem;
-        top: -1.75rem;
-        right: -6.69rem;
-        border-radius: 50%;
-        background-color: var(--cz);
-        filter: blur(12.5rem);
-        content: "";
-        position: absolute;
-    }
-
-    img {
-        width: 10.6875rem;
-        top: 0.75rem;
-        right: 2rem;
-        height: auto;
-        position: absolute;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-end;
+        align-content: flex-end;
+    
+        h3 {
+            max-width: 30rem;
+            font-size: 2rem;
+            line-height: 2.5rem;
+            font-weight: 700;
+            position: relative;
+            z-index: 2;
+        }
+    
+        &::after {
+            width: 19.4375rem;
+            height: 19.4375rem;
+            top: -1.75rem;
+            right: -6.69rem;
+            border-radius: 50%;
+            background-color: var(--cz);
+            filter: blur(12.5rem);
+            content: "";
+            position: absolute;
+        }
+    
+        img {
+            width: 10.6875rem;
+            top: 0.75rem;
+            right: 2rem;
+            height: auto;
+            position: absolute;
+        }
     }
 }
 
@@ -58,21 +82,36 @@
     .double__list {
         margin-top: 2rem;
         gap: 1.5rem;
-    }
-    .double__item {
-        min-height: 17.5rem;
-        padding: 2rem 1rem;
-        h3 {
-            font-size: 1.5rem;
-            line-height: 2rem;
-            br {
-                display: none;
+        &.type2 {
+            .double__item {
+                min-height: 21.5rem !important;
+                padding-top: 11rem !important;
+                justify-content: flex-start !important;
+                gap: 1rem;
+                border-radius: 1.5rem;
+                p {
+                    max-width: inherit;
+                }
+                .double__item {
+                    min-height: inherit !important;
+                }
             }
         }
-        img {
-            width: 8.3125rem;
-            top: 0.88rem;
-            right: 1.38rem;
+        .double__item {
+            min-height: 17.5rem;
+            padding: 2rem 1rem !important;
+            h3 {
+                font-size: 1.5rem;
+                line-height: 2rem;
+                br {
+                    display: none;
+                }
+            }
+            img {
+                width: 8.3125rem;
+                top: 0.88rem;
+                right: 1.38rem;
+            }
         }
     }
 }
@@ -84,10 +123,19 @@
         gap: 1.5rem;
         display: flex;
         flex-direction: column;
-    }
-    .double__item {
-        min-height: 15rem;
-        padding: 2rem 1rem;
-        padding-top: 9.5rem;
+        .double__item {
+            min-height: 15rem;
+            padding: 2rem 1rem !important;
+            padding-top: 9.5rem !important;
+        }
+        &.type2 {
+            gap: 0 !important;
+            display: flex !important;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            .double__item {
+                min-height: inherit !important;
+            }
+        }
     }
 }

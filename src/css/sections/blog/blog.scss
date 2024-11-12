@@ -30,6 +30,12 @@
             background-size: 0.96875rem;
         }
     }
+
+    &:hover {
+        .cover:not(.mob) {
+            transform: translate(-50%, -50%) scale(1.05);
+        }
+    }
 }
 
 .blogitem__img {
@@ -37,6 +43,10 @@
     padding-top: 59.2%;
     position: relative;
     overflow: hidden;
+
+    .cover {
+        transition: .6s;
+    }
 
     .first {
         display: none;

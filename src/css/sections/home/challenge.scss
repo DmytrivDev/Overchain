@@ -11,6 +11,16 @@
     position: relative;
     overflow: hidden;
 
+    &:hover {
+        .cover {
+            transform: translate(-50%, -50%) scale(1.05);
+        }
+    }
+
+    .cover {
+        transition: .6s;
+    }
+
     &::before {
         width: 18.3125rem;
         height: 18.3125rem;
@@ -110,7 +120,13 @@
         top: -31em;
         right: 0;
         left: auto;
-        transform: none;
+        transform: scale(1);
+    }
+
+    &:hover {
+        .cover {
+            transform: scale(1.05);
+        }
     }
 }
 
@@ -204,7 +220,7 @@
             }
         }
     }
-    .chalange__car {
+    .chalange__car, .simplePager {
         overflow: visible;
         margin-top: 2rem;
         .splide__track {

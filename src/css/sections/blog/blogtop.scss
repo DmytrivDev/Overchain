@@ -50,6 +50,7 @@
         display: block;
         width: 100%;
         background-color: var(--cw);
+        font-size: 1.125rem;
     }
 
     button {
@@ -128,6 +129,7 @@
     .search__form {
         width: 100%;
         input {
+            font-size: 1rem;
             padding-left: 3.5rem;
         }
         button {

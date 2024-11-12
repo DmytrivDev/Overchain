@@ -11,6 +11,7 @@ import './parts/accept'
 import './parts/convers'
 import './parts/faq'
 import './parts/ultimate'
+import './parts/double'
  
 headerFunc();
 formFunc();

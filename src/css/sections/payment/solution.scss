@@ -80,7 +80,7 @@
 }
 
 .solution__item {
-    &:hover {
+    &:first-child, &:last-child {
         background-color: var(--cd2);
     }
 }

@@ -25,14 +25,20 @@
     align-items: center;
     align-content: center;
     position: relative;
+    transition: 0.3s;
     background: linear-gradient(133deg, #003e43 -20.24%, #28ffb2 150.24%);
 
     img {
         max-width: 6rem;
         max-height: 6rem;
     }
-}
 
+    &:hover {
+        -webkit-box-shadow: -2px 5px 50px -23px rgba(40, 255, 178, 0.65);
+        -moz-box-shadow: -2px 5px 50px -23px rgba(40, 255, 178, 0.65);
+        box-shadow: -2px 5px 50px -23px rgba(40, 255, 178, 0.65);
+    }
+}
 
 @media screen and (max-width: 1024px) {
     .convert__list {

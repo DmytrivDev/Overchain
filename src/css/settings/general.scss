@@ -54,11 +54,8 @@ html,
 
 .main {
     .stpart {
-        z-index: 1 !important;
-        .strpartcont {
-            position: relative;
-            z-index: 1 !important;
-        }
+        z-index: 1;
+        position: relative;
     }
 }
 
@@ -281,6 +278,7 @@ section {
     &.topel {
         padding-top: 3rem;
         z-index: 16;
+        overflow: visible !important;
 
         .container {
             position: relative;

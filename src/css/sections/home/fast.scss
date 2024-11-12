@@ -1,6 +1,6 @@
 .fast__section {
     overflow: hidden !important;
-    
+
     &::after {
         content: "";
         position: absolute;
@@ -32,6 +32,19 @@
             content: "";
             position: absolute;
         }
+
+        &:hover {
+            .fast__img {
+                transform: scale(1.15);
+                &.img2 {
+                    transform: translateY(-50%) scale(1.15);
+                }
+
+                &.img3 {
+                    transform: rotate(-4.547deg) scale(1.15);
+                }
+            }
+        }
     }
 
     .fast__cont {
@@ -52,6 +65,7 @@
         position: absolute;
         height: auto;
         z-index: 2;
+        transition: .6s;
 
         &.img1 {
             width: 20.25rem;
@@ -197,7 +211,6 @@
         }
     }
 }
-
 
 @media screen and (max-width: 1024px) {
     .fast__section {

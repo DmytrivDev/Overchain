@@ -108,6 +108,7 @@
     }
 
     .txt {
+        min-height: 3rem;
         color: var(--cw);
     }
 }
@@ -206,6 +207,7 @@
     .chose__inner {
         max-width: inherit;
         .txt {
+            min-height: inherit;
             br {
                 display: none;
             }
