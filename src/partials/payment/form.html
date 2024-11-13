@@ -7,7 +7,7 @@
       <input type="hidden" name="form_subject" value="Submited form" />
       <input type="hidden" name="admin_email" value="ivan.trachuk@fleximp.com" />
       <label class="form__item">
-        <span class="form__label">First name</span>
+        <span class="form__label">First name*</span>
         <input
           type="text"
           name="firstname"
@@ -16,7 +16,7 @@
         />
       </label>
       <label class="form__item">
-        <span class="form__label">last name</span>
+        <span class="form__label">last name*</span>
         <input
           type="text"
           name="lasttname"
@@ -25,11 +25,11 @@
         />
       </label>
       <label class="form__item">
-        <span class="form__label">Company name</span>
-        <input type="text" name="companyname" placeholder="Type here" />
+        <span class="form__label">Job Title*</span>
+        <input type="text" name="companyname" data-required="1" placeholder="Type here" />
       </label>
       <label class="form__item">
-        <span class="form__label">Email address</span>
+        <span class="form__label">Email address*</span>
         <input
           type="email"
           name="email"
@@ -43,7 +43,7 @@
       </label>
       <label class="form__item">
         <span class="form__label">Phone*</span>
-        <input type="tel" name="phone" placeholder="+38" />
+        <input type="tel" name="phone" data-required="1" placeholder="+44" />
       </label>
       <!-- <label class="form__item">
         <span class="form__label">Preferred way of contact</span>
