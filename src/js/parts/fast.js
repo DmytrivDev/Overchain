@@ -1,17 +1,17 @@
 import Splide from '@splidejs/splide';
 
-const carousell = document.querySelector('.fast__car');
+const carouselles = document.querySelectorAll('.fast__car');
 
-const sliderOptions = {
-  perPage: 1,
-  perMove: 1,
-  gap: '1rem',
-  drag: true,
-  pagination: true,
-  arrows: false,
-};
+carouselles?.forEach(carousell => {
+  const sliderOptions = {
+    perPage: 1,
+    perMove: 1,
+    gap: '1rem',
+    drag: true,
+    pagination: true,
+    arrows: false,
+  };
 
-if (carousell) {
   const splide = new Splide(carousell, sliderOptions);
 
   checkWidthCases(carousell, splide);
@@ -19,7 +19,8 @@ if (carousell) {
   window.addEventListener('resize', function () {
     checkWidthCases(carousell, splide);
   });
-}
+});
+
 
 function checkWidthCases(carousell, splide) {
   const ww = window.innerWidth;

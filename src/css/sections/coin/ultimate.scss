@@ -14,6 +14,7 @@
     overflow: hidden;
     width: 100%;
     top: 0;
+    z-index: 10;
 
     &.higher {
         top: 6rem !important;
@@ -49,6 +50,7 @@
         justify-content: space-between;
         align-items: flex-start;
         align-content: flex-start;
+        font-weight: 300;
 
         .button {
             max-width: 13.375rem;

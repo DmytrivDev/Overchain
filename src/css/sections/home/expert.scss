@@ -1,9 +1,9 @@
 .section__expert {
     overflow: hidden;
-    background-color: #003E43 !important;
-    position: relative;
+    background-color: #003e43 !important;
     padding: 0 !important;
     z-index: 20 !important;
+    position: relative !important;
 
     & + section {
         padding-top: 11rem !important;
@@ -17,6 +17,45 @@
 
     &:last-child {
         margin-bottom: 9rem !important;
+    }
+
+    &.fullBg {
+        .expert__bg {
+            width: 100%;
+            height: 100%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            background-color: var(--ct);
+
+            &::after {
+                display: none;
+            }
+
+            .mob {
+                display: none;
+            }
+        }
+    }
+
+    &.withImg {
+        .expert__container {
+            position: relative;
+        }
+
+        .expert__decimg {
+            width: 38.375rem;
+            top: 2.3rem;
+            right: -2.5rem;
+            position: absolute;
+
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+        }
     }
 }
 
@@ -34,10 +73,6 @@
     right: 0;
     z-index: 4;
 
-    img {
-        
-    }
-
     &::after {
         content: "";
         position: absolute;
@@ -45,7 +80,8 @@
         right: 0;
         bottom: 0;
         top: 0;
-        background: linear-gradient(270deg, rgba(0, 62, 67, 0.00) 45.72%, #003E43 100%), linear-gradient(0deg, rgba(0, 62, 67, 0.60) 0%, rgba(0, 62, 67, 1) 100%);
+        background: linear-gradient(270deg, rgba(0, 62, 67, 0) 45.72%, #003e43 100%),
+            linear-gradient(0deg, rgba(0, 62, 67, 0.6) 0%, rgba(0, 62, 67, 1) 100%);
     }
 }
 
@@ -53,6 +89,10 @@
     max-width: 32.5em;
     position: relative;
     z-index: 2;
+
+    &.longer {
+        max-width: 42rem;
+    }
 
     h2 {
         font-size: 2.5rem;
@@ -63,9 +103,12 @@
 
 .expert__button {
     margin-top: 4rem;
-    max-width: 12rem;
-    width: 100%;
+    min-width: 12rem;
+    padding: 0 4rem !important;
+    width: auto;
     color: var(--cd) !important;
+    display: inline-flex;
+    white-space: nowrap;
 }
 
 .expert__img {
@@ -90,6 +133,11 @@
     }
 }
 
+.expert__desc {
+    margin-top: 1.5rem;
+    max-width: 35.5rem;
+}
+
 @media screen and (max-width: 1024px) {
     .section__expert {
         & + section {
@@ -97,6 +145,36 @@
         }
         &:last-child {
             margin-bottom: 7rem !important;
+        }
+        &.fullBg {
+            .expert__bg {
+                transform: none;
+
+                .cover {
+                    &.mob {
+                        display: block;
+                    }
+                }
+            }
+        }
+        &.withImg {
+            .expert__container {
+                padding-bottom: 25.08rem;
+            }
+            .expert__decimg {
+                width: auto;
+                height: 18.62156rem;
+                top: inherit;
+                bottom: 2.25rem;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                justify-content: center;
+                img {
+                    height: 100%;
+                    width: auto;
+                }
+            }
         }
     }
     .expert__bg {
@@ -110,7 +188,8 @@
 
         &::after {
             top: -1px;
-            background: linear-gradient(0deg, rgba(0, 62, 67, 0.00) 62.12%, #003E43 100%), linear-gradient(0deg, rgba(0, 62, 67, 0.60) 0%, rgba(0, 62, 67, 0.60) 100%);
+            background: linear-gradient(0deg, rgba(0, 62, 67, 0) 62.12%, #003e43 100%),
+                linear-gradient(0deg, rgba(0, 62, 67, 0.6) 0%, rgba(0, 62, 67, 0.6) 100%);
         }
     }
     .expert__container {
@@ -125,7 +204,7 @@
     }
     .expert__button {
         margin-top: 2.5rem;
-        max-width: 13.75rem;
+        max-width: inherit;;
     }
     .expert__img {
         width: 24rem;

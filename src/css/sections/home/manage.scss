@@ -1,6 +1,6 @@
 .section__manage,
 .section__business {
-    .starting__bottom {
+    .section__bottom {
         padding-top: 5.5rem;
         margin-top: 0;
     }
@@ -13,7 +13,7 @@
         .manage__item {
             border-color: #4b4b4b !important;
         }
-        .starting__bottom {
+        .section__bottom {
             background-color: var(--ct);
             position: relative;
             z-index: 2;
@@ -32,63 +32,64 @@
             }
         }
     }
+}
 
-    &:not(.white).decoration {
+section:not(.white).decoration {
+    overflow: visible;
+
+    * {
+        position: relative;
+        z-index: 3;
+    }
+
+    .container {
+        position: relative;
         overflow: visible;
+        z-index: 5;
 
-        * {
-            position: relative;
-            z-index: 3;
+        &::after,
+        &::before {
+            width: 40.875rem;
+            height: 40.875rem;
+            top: 5.38rem;
+            border-radius: 50%;
+            opacity: 0.48;
+            background: var(--cz);
+            filter: blur(18.75rem);
+            position: absolute;
+            z-index: 0;
+            content: "";
+            display: block;
         }
+
+        &::before {
+            left: 6.25rem;
+            transform: translateX(-100%);
+        }
+
+        &::after {
+            right: 6.25rem;
+            transform: translateX(100%);
+        }
+    }
+    .duble {
+        margin-bottom: 0 !important;
+        &::before {
+            display: none;
+        }
+    }
+    .section__bottom {
+        padding-top: 4rem;
+        background-color: transparent;
+    }
+
+    & + section:not(.topel) {
+        z-index: 1;
+        position: static !important;
 
         .container {
             position: relative;
-            overflow: visible;
-
-            &::after,
-            &::before {
-                width: 40.875rem;
-                height: 40.875rem;
-                top: 5.38rem;
-                border-radius: 50%;
-                opacity: 0.48;
-                background: var(--cz);
-                filter: blur(18.75rem);
-                position: absolute;
-                z-index: 0;
-                content: "";
-                display: block;
-            }
-
-            &::before {
-                left: 6.25rem;
-                transform: translateX(-100%);
-            }
-
-            &::after {
-                right: 6.25rem;
-                transform: translateX(100%);
-            }
-        }
-        .duble {
-            margin-bottom: 0 !important;
-            &::before {
-                display: none;
-            }
-        }
-        .starting__bottom {
-            padding-top: 4rem;
-            background-color: transparent;
-        }
-
-        & + section:not(.topel) {
-            z-index: 1;
-            position: static !important;
-
-            .container {
-                position: relative;
-                z-index: 20 !important;
-            }
+            z-index: 20 !important;
         }
     }
 }
@@ -209,28 +210,21 @@
 }
 
 @media screen and (max-width: 1024px) {
-    .section__manage,
-    .section__business {
-        &:not(.white).decoration {
-            .container {
-                &::before {
-                    top: auto;
-                    bottom: -2rem;
-                    left: 7.5rem;
-                }
-                &::after {
-                    top: 7rem;
-                    right: 7.5rem;
-                }
+    section:not(.white).decoration {
+        .container {
+            &::before {
+                top: auto;
+                bottom: -2rem;
+                left: 7.5rem;
             }
-            .starting__bottom {
-                padding-top: 2.5rem;
+            &::after {
+                top: 7rem;
+                right: 7.5rem;
             }
         }
-    }
-    .section__manage {
-        padding-top: 6.5em !important;
-        padding-bottom: 9em !important;
+        .section__bottom {
+            padding-top: 2.5rem;
+        }
     }
     .manage__list {
         margin-top: 2.5em;
@@ -289,8 +283,7 @@
 }
 
 @media screen and (min-width: 761px) {
-    .section__manage,
-    .section__business {
+    section {
         &:not(.white).decoration {
             .duble {
                 .manage__item:last-child:nth-child(odd) {

@@ -12,6 +12,10 @@ import './parts/convers'
 import './parts/faq'
 import './parts/ultimate'
 import './parts/double'
+import './parts/settlment'
+import './parts/options'
+import './parts/starting'
+import './parts/reporting'
  
 headerFunc();
 formFunc();

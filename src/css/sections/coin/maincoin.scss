@@ -81,6 +81,7 @@
 @media screen and (max-width: 760px) {
     .section__maincoin {
         padding-bottom: 65vw !important;
+        margin-bottom: 2.5rem !important;
         &::before {
             width: calc(100% + 4rem);
             height: calc(100% + 3.14rem);

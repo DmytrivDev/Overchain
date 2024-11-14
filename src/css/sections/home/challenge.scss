@@ -1,3 +1,9 @@
+.section__challenge {
+    .container {
+        overflow: hidden;
+    }
+}
+
 .challenge__list {
     margin-top: 3em;
     gap: 1em;
@@ -10,6 +16,19 @@
     background-color: var(--cd);
     position: relative;
     overflow: hidden;
+    grid-column: span 30;
+
+    &.coll_3 {
+        grid-column: span 20;
+    }
+
+    &.coll_23 {
+        grid-column: span 35;
+    }
+
+    &.coll_13 {
+        grid-column: span 25;
+    }
 
     &:hover {
         .cover {
@@ -47,10 +66,6 @@
         z-index: 2;
     }
 
-    .cover {
-        height: auto;
-    }
-
     &.sm {
         .challenge__link {
             padding: 2em 1em;
@@ -81,90 +96,6 @@
     }
 }
 
-.chl1 {
-    grid-column: 1 / 31;
-
-    .cover {
-        width: 115%;
-        left: 57%;
-    }
-}
-
-.chl2 {
-    grid-column: 31 / -1;
-
-    .cover {
-        width: 45.5rem;
-        left: 59%;
-        top: 60%;
-    }
-}
-
-.chl3 {
-    grid-column: 1 / 36;
-}
-
-.chl4 {
-    grid-column: 36 / -1;
-
-    .cover {
-        width: 105%;
-    }
-}
-
-.chl5 {
-    grid-column: 1 / 36;
-
-    .cover {
-        width: 57.4375rem;
-        top: -31em;
-        right: 0;
-        left: auto;
-        transform: scale(1);
-    }
-
-    &:hover {
-        .cover {
-            transform: scale(1.05);
-        }
-    }
-}
-
-.chl6 {
-    grid-column: 36 / -1;
-}
-
-.chl7 {
-    grid-column: 36 / -1;
-
-    .cover {
-        top: 65%;
-    }
-}
-
-.chl8 {
-    grid-column: 1 / 21;
-}
-
-.chl9 {
-    grid-column: 21 / 41;
-}
-
-.chl10 {
-    grid-column: 41 / -1;
-}
-
-.chl11 {
-    grid-column: 1 / 21;
-}
-
-.chl12 {
-    grid-column: 21 / 41;
-}
-
-.chl13 {
-    grid-column: 41 / -1;
-}
 
 .challenge__link {
     padding: 2em;
@@ -277,51 +208,6 @@
             &::before {
                 display: none;
             }
-        }
-    }
-    .chl1 {
-        .cover {
-            width: 43.75em;
-            left: 47%;
-            top: 47%;
-        }
-    }
-    .chl2 {
-        .cover {
-            width: 44.75em;
-            left: 52%;
-            top: 49%;
-        }
-    }
-    .chl3 {
-        .cover {
-            width: auto;
-            height: auto !important;
-            transform: translate(-55%, -25%);
-        }
-    }
-    .chl5 {
-        .cover {
-            width: 47.76269rem;
-            height: 37.17rem;
-            top: 30%;
-            left: 20%;
-            transform: translate(-50%, -50%);
-        }
-    }
-    .chl6 {
-        .cover {
-            width: 40em;
-            top: 30%;
-            left: 35%;
-            transform: translate(-50%, -50%);
-        }
-    }
-    .chl7 {
-        grid-column: 36 / -1;
-        .cover {
-            top: 70%;
-            width: 35em;
         }
     }
     .challenge__link {

@@ -57,6 +57,12 @@
 @import url("./sections/solution/first.scss");
 @import url("./sections/solution/double.scss");
 @import url("./sections/solution/partlists.scss");
+@import url("./sections/solution/integration.scss");
+@import url("./sections/solution/settlment.scss");
+@import url("./sections/solution/options.scss");
+@import url("./sections/solution/reporting.scss");
+@import url("./sections/solution/mediatext.scss");
+@import url("./sections/solution/features.scss");
 
 
 /* Search */

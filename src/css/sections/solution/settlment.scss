@@ -1,0 +1,87 @@
+.settlment__car {
+    margin-top: 2.5rem;
+}
+
+.settlment__item {
+    padding: 2rem 1rem;
+    border-radius: 1.5rem;
+    background-color: var(--cd);
+
+    .settlment__icon {
+        width: 5rem;
+        height: 5rem;
+        position: relative;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        margin-top: 1rem;
+        font-weight: 600;
+    }
+
+    p {
+        margin-top: 1rem;
+        font-weight: 300;
+    }
+}
+
+.settlment__list {
+    &.bigger {
+        .settlment__item {
+            padding: 2rem;
+            padding-bottom: 4rem;
+
+            .settlment__icon {
+                width: 7.5rem;
+                height: 7.5rem;
+            }
+        
+            h3 {
+                font-size: 2rem;
+                line-height: 2.5rem;
+                margin-top: 2rem;
+            }
+        
+            p {
+                margin-top: 1.5rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 761px) {
+    .settlment__list {
+        gap: 1rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        &.bigger {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+
+@media screen and (max-width: 760px) {
+    .settlment__item {
+        h3 {
+            margin-top: 1.5rem;
+        }
+    }
+    .settlment__list {
+        &.bigger {
+            .settlment__item {
+                padding: 1.5rem 1rem;
+                h3 {
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                    margin-top: 1rem;
+                }
+                p {
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}

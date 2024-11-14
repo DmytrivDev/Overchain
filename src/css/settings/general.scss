@@ -395,6 +395,27 @@ section {
     }
 }
 
+.section__bottom {
+    margin-top: 4rem;
+    justify-content: center;
+
+    .button {
+        max-width: 13.625rem;
+        width: 100%;
+    }
+}
+
+.ovf {
+    overflow: hidden;
+}
+
+.inner__overflow {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
 @media screen and (max-width: 1320px) {
     html {
         font-size: 1.21vw;
@@ -501,6 +522,9 @@ section {
                 height: 2.5rem;
             }
         }
+    }
+    .section__bottom {
+        margin-top: 2.5rem;
     }
 }
 

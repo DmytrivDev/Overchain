@@ -1,0 +1,106 @@
+.section__options {
+    &:not(.white).decoration {
+        .container {
+            &::after,
+            &::before {
+                width: 49.23844rem;
+                height: 49.23844rem;
+                top: 7.4rem;
+            }
+            &::before {
+                left: 9.5rem;
+            }
+            &::after {
+                right: 9.5rem;
+            }
+        }
+    }
+}
+.options__car {
+    margin-top: 2.5rem;
+}
+
+.options__item {
+    padding: 0 0.75rem;
+    padding-bottom: 1.5rem;
+    border-right: 1px solid #4b4b4b;
+
+    &:nth-child(4n - 3) {
+        padding-left: 0;
+    }
+
+    &:nth-child(4n) {
+        padding-right: 0;
+        border-right: none;
+    }
+
+    .options__icon {
+        width: 5rem;
+        height: 5rem;
+        position: relative;
+    }
+
+    h3 {
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1.25;
+    }
+
+    p {
+        margin-top: 1.5rem;
+        font-weight: 300;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .options__list {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .section__options {
+        &:not(.white).decoration {
+            .container {
+                &::after,
+                &::before {
+                    width: 27.25rem;
+                    height: 27.25rem;
+                }
+                &::before {
+                    top: 6.5rem;
+                    left: 10.3rem;
+                }
+                &::after {
+                    bottom: -11.5rem;
+                    transform: translate(100%, 100%);
+                    top: auto;
+                    right: 17.5rem;
+                }
+            }
+        }
+    }
+    .options__car {
+        font-size: 0;
+    }
+    .options__item {
+        padding: 0 1rem !important;
+        border-right: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        h3 {
+            width: 100%;
+            br {
+                display: none;
+            }
+        }
+        p {
+            width: 100%;
+        }
+    }
+}
