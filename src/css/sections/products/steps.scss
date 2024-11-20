@@ -1,0 +1,75 @@
+.srtps__car {
+    margin-top: 7rem;
+    overflow: visible;
+
+    * {
+        overflow: visible !important;
+    }
+}
+
+.steps__item {
+    border-radius: 2rem;
+    padding: 3rem 1.5rem;
+    padding-top: 9rem;
+    background-color: var(--cd);
+    position: relative;
+
+    h3 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    .num {
+        width: 10rem;
+        height: 10rem;
+        top: -3rem;
+        font-size: 4rem;
+        border: 0.188rem solid var(--cz);
+        font-weight: 700;
+        border-radius: 50%;
+        background-color: var(--ct);
+        color: var(--cz);
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
+
+.steps__desc {
+    margin-top: 1rem;
+}
+
+@media screen and (min-width: 1025px) {
+    .steps__list {
+        gap: 1rem;
+        row-gap: 4rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .srtps__car {
+        margin-top: 4.5rem;
+    }
+    .steps__item {
+        padding-top: 7.75rem;
+        h3 {
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+        .num {
+            width: 7.5rem;
+            height: 7.5rem;
+            top: -1.75rem;
+            font-size: 2.5rem;
+        }
+    }
+    .steps__desc {
+        margin-top: 2rem;
+    }
+}

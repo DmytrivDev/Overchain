@@ -19,6 +19,7 @@ import './parts/reporting'
 import './parts/vision'
 import './parts/team'
 import './parts/filter'
+import './parts/stpes'
  
 headerFunc();
 formFunc();

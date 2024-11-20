@@ -16,6 +16,12 @@
     & + section:not(.topel) {
         padding-top: 5rem !important;
     }
+
+    .cover {
+        &.mob {
+            display: none;
+        }
+    }
 }
 
 .prodfirst__content {
@@ -42,4 +48,36 @@
     max-width: 44.5rem;
     margin-top: 2rem;
     display: inline-block;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .section__prodfirst {
+        padding-top: 8.5rem !important;
+        padding-bottom: 10rem !important;
+        min-height: 100vh;
+    }
+    .prodfirst__content {
+        .button {
+            margin-top: 2.5rem;
+        }
+    }
+}
+
+
+@media screen and (max-width: 760px) {
+    .section__prodfirst {
+        .cover {
+            display: none;
+            transform: translateX(-50%);
+            top: 17.3rem;
+            bottom: 0;
+            height: auto;
+            object-fit: unset;
+            width: auto;
+            &.mob {
+                display: block;
+            }
+        }
+    }
 }
