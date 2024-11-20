@@ -1,0 +1,166 @@
+.faqpage {
+    padding-top: 6.5rem !important;
+
+    .section__titlecont {
+        margin-top: 2.75rem;
+    }
+
+    .faq__list {
+        margin-top: 4.5rem;
+
+        .faq__item.hideFaq {
+            display: none;
+        }
+    }
+}
+
+.faq__sectitle {
+    margin-top: 5rem;
+    font-size: 3rem;
+    line-height: 3.5rem;
+}
+
+.faq__filtercont {
+    margin-top: 3.5rem;
+    gap: 2rem;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.filter__part {
+    max-width: 33.75rem;
+    width: 100%;
+
+    &:last-child {
+        max-width: 24.75rem;
+    }
+}
+
+.filterSearchCont {
+    position: relative;
+
+    &::before {
+        width: 1.5rem;
+        height: 1.5rem;
+        left: 1.5rem;
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-repeat: no-repeat;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M19.4856 20.1545L13.2236 13.8925C12.7236 14.3185 12.1486 14.6482 11.4986 14.8815C10.8486 15.1149 10.1953 15.2315 9.53859 15.2315C7.93726 15.2315 6.58193 14.6772 5.47259 13.5685C4.36326 12.4592 3.80859 11.1042 3.80859 9.50353C3.80859 7.90286 4.36259 6.5472 5.47059 5.43653C6.57926 4.3252 7.93393 3.76953 9.53459 3.76953C11.1359 3.76953 12.4919 4.3242 13.6026 5.43353C14.7133 6.54286 15.2686 7.89853 15.2686 9.50053C15.2686 10.1952 15.1456 10.8675 14.8996 11.5175C14.6529 12.1675 14.3296 12.7235 13.9296 13.1855L20.1916 19.4465L19.4856 20.1545ZM9.53859 14.2305C10.8653 14.2305 11.9856 13.7739 12.8996 12.8605C13.8129 11.9472 14.2696 10.8269 14.2696 9.49953C14.2696 8.17286 13.8129 7.05286 12.8996 6.13953C11.9863 5.2262 10.8663 4.76953 9.53959 4.76953C8.21293 4.76953 7.09259 5.2262 6.17859 6.13953C5.26526 7.05286 4.80859 8.17286 4.80859 9.49953C4.80859 10.8262 5.26526 11.9462 6.17859 12.8595C7.09193 13.7729 8.21193 14.2305 9.53859 14.2305Z' fill='%23888888'/%3E%3C/svg%3E");
+        background-size: contain;
+    }
+
+    input {
+        height: 3.5rem;
+        font-size: 1.125rem;
+        padding-left: 4rem;
+        border-radius: 0.75rem;
+        background-color: var(--cg);
+        display: block;
+        width: 100%;
+    }
+}
+
+div.filterSelect {
+    width: 100%;
+    border-radius: 0.75rem;
+    height: 3.5rem;
+    padding-left: 1.5rem;
+    padding-right: 3rem;
+    border: 2px solid var(--cd) !important;
+    display: flex;
+    align-items: center;
+    align-content: center;
+
+    * {
+        font-size: 1.125rem;
+    }
+
+    .current {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    &.open {
+        &::after {
+            transform: translateY(-50%) rotate(-180deg);
+        }
+    }
+
+    &::after {
+        border: none;
+        width: 1rem;
+        height: 1rem;
+        margin-top: 0;
+        right: 1.5rem;
+        top: 50%;
+        transform-origin: unset;
+        transform: translateY(-50%) rotate(0);
+        transition: all 0.3s ease-in-out;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='10' viewBox='0 0 12 10' fill='none'%3E%3Cpath d='M4.26795 9C5.03775 10.3333 6.96225 10.3333 7.73205 9L11.1962 3C11.966 1.66667 11.0037 0 9.4641 0H2.5359C0.996296 0 0.0340474 1.66667 0.803848 3L4.26795 9Z' fill='%23003E43'/%3E%3C/svg%3E");
+    }
+
+    .nice-select-dropdown {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        transform: translateY(.5rem) !important;
+    }
+}
+
+.notFoundFaq {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 5rem;
+    display: none;
+
+    &.sgowed {
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .faqpage {
+        padding-top: 6rem !important;
+        .section__titlecont {
+            margin-top: 2rem;
+        }
+        .faq__list {
+            margin-top: 3rem;
+        }
+    }
+    .faq__sectitle {
+        font-size: 1.625rem;
+        line-height: 3rem;
+    }
+    .faq__filtercont {
+        margin-top: 2rem;
+    }
+    .filter__part {
+        max-width: calc(50% - 1rem) !important;
+    }
+    .notFoundFaq {
+        margin-top: 3rem;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .filter__part {
+        max-width: 100% !important;
+    }
+    .notFoundFaq {
+        margin-top: 3rem;
+    }
+}

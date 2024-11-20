@@ -86,6 +86,11 @@
                 transition: .3s;
             }
 
+            img {
+                width: 11.875rem;
+                right: 1.25rem;
+            }
+
             .double__desc {
                 max-height: 0;
                 overflow: hidden;
@@ -161,6 +166,14 @@
             }
         }
     }
+    .double__list.hovering {
+        .double__item {
+            img {
+                width: 10rem;
+                right: 0;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 760px) {
@@ -181,6 +194,15 @@
             flex-direction: row;
             .double__item {
                 min-height: inherit !important;
+            }
+        }
+    }
+    .double__list.hovering {
+        .double__item {
+            img {
+                width: 9.625rem;
+                top: 0;
+                right: 0;
             }
         }
     }

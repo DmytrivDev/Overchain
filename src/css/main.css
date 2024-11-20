@@ -64,6 +64,21 @@
 @import url("./sections/solution/mediatext.scss");
 @import url("./sections/solution/features.scss");
 
+/* About */
+@import url("./sections/about/about.scss");
+@import url("./sections/about/vision.scss");
+@import url("./sections/about/team.scss");
+@import url("./sections/about/office.scss");
+
+/* FAQ */
+@import url("./sections/faqpage/faqpage.scss");
+
+/* Contact */
+@import url("./sections/contact/contact.scss");
+
+/* Products */
+@import url("./sections/products/prodfirst.scss");
+
 
 /* Search */
 @import url("./sections/search/search.scss");

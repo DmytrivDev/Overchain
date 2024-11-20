@@ -125,6 +125,10 @@ html,
         color: var(--ct) !important;
         border-color: var(--cz) !important;
     }
+
+    &.hiddeDesc {
+        display: none;
+    }
 }
 
 h1 {
@@ -448,6 +452,9 @@ section {
     .button {
         max-width: 13.75em;
         width: 100%;
+        &.hiddeDesc {
+            display: inline-flex;
+        }
     }
     h1 {
         font-size: 2.375rem;

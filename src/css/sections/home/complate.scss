@@ -237,6 +237,24 @@
     }
 }
 
+@keyframes animate {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
 @media screen and (max-width: 760px) {
     .section__complate {
         overflow: hidden;
@@ -256,23 +274,6 @@
         img {
             max-width: 15rem;
             max-height: 5rem;
-        }
-    }
-    @keyframes animate {
-        0% {
-            transform: translateX(100%);
-        }
-        100% {
-            transform: translateX(-100%);
-        }
-    }
-
-    @keyframes animate2 {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(-200%);
         }
     }
 }

@@ -94,6 +94,14 @@
         max-width: 42rem;
     }
 
+    &.maximum {
+        max-width: 50rem;
+
+        .expert__desc {
+            max-width: inherit;
+        }
+    }
+
     h2 {
         font-size: 2.5rem;
         line-height: 1.3;
@@ -136,6 +144,14 @@
 .expert__desc {
     margin-top: 1.5rem;
     max-width: 35.5rem;
+
+    & > * {
+        margin-bottom: 1em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -204,7 +220,7 @@
     }
     .expert__button {
         margin-top: 2.5rem;
-        max-width: inherit;;
+        max-width: inherit;
     }
     .expert__img {
         width: 24rem;
@@ -215,12 +231,52 @@
         bottom: 2.5em;
         left: 1em;
     }
+    .expert__bg {
+        &.both {
+            top: inherit !important;
+            height: auto !important;
+            direction: rtl;
+            background-color: var(--cd) !important;
+            img {
+                height: 19.125rem;
+                bottom: 0;
+                right: 0;
+                object-fit: unset;
+                transform: unset;
+                left: inherit;
+                top: inherit;
+                position: static !important;
+                width: auto;
+                display: inline-block;
+                position: absolute;
+            }
+            &::before {
+                bottom: 50%;
+                content: "" !important;
+                position: absolute;
+                display: block;
+                left: 0;
+                right: 0;
+                top: 0;
+                z-index: 2;
+                background: linear-gradient(0deg, rgba(0, 62, 67, 0.00) 55.56%, #003E43 100%), linear-gradient(0deg, rgba(0, 62, 67, 0) 80%, rgba(0, 62, 67, 0.60) 100%);
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 760px) {
     .expert__content {
         margin: 0 auto;
         text-align: center;
+        &.leftMob {
+            * {
+                text-align: left;
+            }
+            .button {
+                text-align: center;
+            }
+        }
     }
     .expert__img {
         width: 15.9375rem;

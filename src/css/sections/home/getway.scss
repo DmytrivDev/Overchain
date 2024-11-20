@@ -1,8 +1,23 @@
 .getway__list {
     padding-top: 4rem;
-    gap: 1em;
+    gap: 1rem;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
+
+    &.moreSm {
+        .getway__item {
+            padding: 3rem 2rem;
+            .getway__cont {
+                h3 {
+                    font-size: 2rem;
+                    line-height: 2.5rem;
+                }
+                p {
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
 }
 
 .getway__item {
@@ -153,7 +168,6 @@
         left: -12.19em;
     }
 }
-
 .getw_6 {
     grid-area: 18 / 12 / 21 / 17;
 
@@ -179,7 +193,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1rem;
 
     .getway__item {
         width: 100% !important;
@@ -199,7 +213,7 @@
         }
 
         &.partOne {
-            max-width: calc(65% - 1rem);
+            max-width: calc(65% - .5rem);
 
             .getway__cont {
                 max-width: 24.4rem;
@@ -214,10 +228,40 @@
         }
 
         &.partSec {
-            max-width: calc(35% - 1rem);
+            max-width: calc(35% - .5rem);
 
             &::after {
                 display: none;
+            }
+        }
+
+        &.partThr {
+            max-width: calc(59% - .5rem);
+
+            .getway__cont {
+                max-width: 24.4rem;
+            }
+
+            &::after {
+                width: 24.5625rem;
+                height: 24.5625rem;
+                top: -11rem;
+                right: -11.69rem;
+            }
+        }
+
+        &.partFr {
+            max-width: calc(41% - .5rem);
+
+            .getway__cont {
+                max-width: 100% !important;
+            }
+
+            &::after {
+                width: 23.68531rem;
+                height: 24.90919rem;
+                top: 0.69rem;
+                right: -11.69rem;
             }
         }
 
@@ -260,6 +304,42 @@
                 top: 2.56rem;
                 right: -3.2rem;
                 transform: unset;
+            }
+        }
+        &.cind5 {
+            .getway__cont {
+                max-width: calc(100% - 11.75rem);
+            }
+            img {
+                width: 21.28019rem;
+                height: auto;
+                top: -4rem;
+                right: -6.9rem;
+                transform: rotate(-22deg);
+            }
+        }
+        &.cind6 {
+            .getway__cont {
+                max-width: calc(100% - 13rem);
+            }
+            img {
+                width: auto;
+                height: 14.2rem;
+                top: 50%;
+                right: 14.2rem;
+                transform: translateY(-50%) translateX(100%);
+            }
+        }
+        &.cind7 {
+            .getway__cont {
+                max-width: calc(100% - 13rem);
+            }
+            img {
+                width: auto;
+                height: 17.5rem;
+                top: 50%;
+                right: 13.3rem;
+                transform: translateY(-50%) translateX(100%);
             }
         }
     }
@@ -550,6 +630,12 @@
             &.partSec {
                 max-width: unset;
             }
+            &.partThr {
+                max-width: unset;
+            }
+            &.partFr {
+                max-width: unset;
+            }
             &.cind1 {
                 img {
                     width: 16.4655rem;
@@ -585,6 +671,13 @@
                     right: 1em;
                 }
             }
+            &.cind5 {
+                img {
+                    width: 18rem;
+                    height: auto;
+                    right: 1em;
+                }
+            }
         }
     }
 }
@@ -604,6 +697,15 @@
         .more__btn {
             margin-top: 2.5rem;
             display: inline-flex;
+        }
+        &.moreSm {
+            .getway__item {
+                .getway__cont {
+                    p {
+                        margin-top: 1.5rem;
+                    }
+                }
+            }
         }
     }
     .getway__item {
@@ -911,6 +1013,43 @@
                     transform: translateX(-50%);
                     top: inherit;
                     bottom: -1.5rem;
+                }
+            }
+            &.cind5 {
+                img {
+                    width: 19.1875rem;
+                    height: 19.1875rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: inherit;
+                    bottom: -1.5rem;
+                }
+            }
+            &.cind6 {
+                img {
+                    height: 14.19719rem;
+                    bottom: -0.63em;
+                    transform: inherit;
+                    left: 4.31rem;
+                    right: inherit;
+                    top: inherit;
+                }
+                &::after {
+                    width: 25.6875rem;
+                    height: 27.125rem;
+                    transform: unset;
+                    top: 4.88rem;
+                    left: -10.71rem;
+                }
+            }
+            &.cind7 {
+                img {
+                    bottom: -4.25em;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    max-width: inherit;
+                    right: auto;
+                    top: auto;
                 }
             }
             &.noImg {

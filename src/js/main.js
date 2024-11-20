@@ -16,6 +16,9 @@ import './parts/settlment'
 import './parts/options'
 import './parts/starting'
 import './parts/reporting'
+import './parts/vision'
+import './parts/team'
+import './parts/filter'
  
 headerFunc();
 formFunc();

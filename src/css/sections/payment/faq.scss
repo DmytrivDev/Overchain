@@ -86,6 +86,20 @@
                 * {
                     margin-top: 0 !important
                 }
+
+                ul {
+                    padding-left: 1.25rem;
+                    li {
+                        list-style: disc !important;
+                    }
+                }
+
+                ol {
+                    padding-left: 1.25rem;
+                    li {
+                        list-style: decimal !important;
+                    }
+                }
             }
         }
     }

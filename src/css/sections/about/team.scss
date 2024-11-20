@@ -1,0 +1,93 @@
+.team__car {
+    margin-top: 4.5rem;
+}
+
+.team__item {
+    padding-bottom: 3rem;
+    position: relative;
+
+    .more__btn {
+        color: var(--ct);
+        text-decoration: underline;
+        font-weight: 600;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        &::after {
+            opacity: 0;
+        }
+    }
+
+    &:hover {
+        .more__btn {
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.team__photo {
+    border-radius: 2rem;
+    padding-top: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.team__name {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.team__desc {
+    font-size: 1.125rem;
+    line-height: 2rem;
+    margin-top: 0.5rem;
+    font-weight: 700;
+    opacity: 0.5;
+}
+
+@media screen and (min-width: 1025px) {
+    .team__list {
+        gap: 0.8rem;
+        row-gap: 2.5rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .team__car {
+        margin-top: 4rem;
+    }
+    .team__item {
+        .more__btn {
+            bottom: 0.3rem;
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+    .team__photo {
+        padding-top: 96.8%;
+    }
+    .team__name {
+        margin-top: 1,65rem;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .team__car .splide__track {
+        width: calc(100% - 3rem);
+    }
+    .team__item {
+        text-align: center;
+        .more__btn {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
