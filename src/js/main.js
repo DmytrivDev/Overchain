@@ -20,6 +20,7 @@ import './parts/vision'
 import './parts/team'
 import './parts/filter'
 import './parts/stpes'
+import './parts/reviews'
  
 headerFunc();
 formFunc();

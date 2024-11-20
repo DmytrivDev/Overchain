@@ -79,6 +79,7 @@
 /* Products */
 @import url("./sections/products/prodfirst.scss");
 @import url("./sections/products/steps.scss");
+@import url("./sections/products/reviews.scss");
 
 
 /* Search */
