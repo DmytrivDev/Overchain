@@ -21,6 +21,8 @@ import './parts/team'
 import './parts/filter'
 import './parts/stpes'
 import './parts/reviews'
+import './parts/compleate'
+import './parts/coins'
  
 headerFunc();
 formFunc();

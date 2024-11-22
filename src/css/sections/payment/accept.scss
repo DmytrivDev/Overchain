@@ -1,6 +1,39 @@
+.section__accept {
+    padding: 0 !important;
+    position: relative;
+    overflow: visible !important;
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start; 
+}
+
+.accept__container {
+    position: sticky;
+    top: -100px;
+    overflow: hidden;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+
+    .container {
+        padding-top: 6rem !important;
+        padding-bottom: 6rem !important;
+        min-height: 100vh;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center;
+        align-content: center;
+        min-height: 100vh;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
 .accept__car {
     border-radius: 2rem;
     overflow: hidden;
+    max-width: 100%;
 
     .splide__pagination {
         right: 1.5rem;
@@ -356,7 +389,7 @@
         border-radius: 1.25rem;
         overflow: visible;
         .splide__track {
-            overflow: visible; 
+            overflow: visible;
         }
         .splide__pagination {
             right: 0;
@@ -551,8 +584,17 @@
             }
         }
     }
+    .section__accept {
+        height: auto !important;
+    }
+    .accept__container {
+        .container {
+            padding-top: 2.5rem !important;
+            padding-bottom: 6rem !important;
+            min-height: inherit !important;
+        }
+    }
 }
-
 
 @media screen and (max-width: 768px) {
     .accept__right {

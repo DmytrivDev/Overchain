@@ -54,6 +54,71 @@
     max-width: 38rem;
 }
 
+.maincoin__deccont {
+    position: absolute;
+    left: 50%;
+    width: 0;
+    bottom: 0;
+    top: 0;
+
+    .coindec {
+        position: absolute;
+        height: auto;
+
+        &.coin_1 {
+            width: 32rem;
+            left: -13.563rem;
+            top: 7.313rem;
+        }
+
+        &.coin_2 {
+            width: 22.625rem;
+            left: -43rem;
+            top: 24.563rem;
+        }
+
+        &.coin_3 {
+            width: 19.7504em;
+            left: 25.313rem;
+            top: 26.313rem;
+        }
+    }
+}
+
+.main__bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    backdrop-filter: blur(2px);
+
+    &::after {
+        width: 35rem;
+        height: 35rem;
+        top: 50%;
+        opacity: 0.3;
+        border-radius: 50%;
+        background: var(--cz);
+        filter: blur(10em);
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        content: "";
+        position: absolute;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        z-index: 2;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(10, 10, 10, 0.62) 44.97%, #101010 100%);
+    }
+}
+
 @media screen and (max-width: 1024px) {
     .section__maincoin {
         padding-top: 8.5rem !important;
@@ -76,6 +141,30 @@
             margin-top: 2.5rem;
         }
     }
+    .maincoin__deccont {
+        z-index: 1;
+        .coindec {
+            &.coin_1 {
+                display: none;
+            }
+            &.coin_3 {
+                width: 22rem;
+                left: -5rem;
+                top: auto;
+                bottom: 3rem;
+            }
+            &.coin_2 {
+                display: none;
+            }
+        }
+    }
+    .main__bg {
+        &::after {
+            width: 24rem;
+            height: 24rem;
+            opacity: 0.4;
+        }
+    }
 }
 
 @media screen and (max-width: 760px) {
@@ -86,7 +175,7 @@
             width: calc(100% + 4rem);
             height: calc(100% + 3.14rem);
             border-radius: 50%;
-            opacity: 0.48;
+            opacity: 0.2;
             background: var(--cz);
             filter: blur(12.518em);
             content: "";
@@ -94,6 +183,7 @@
             left: 50%;
             transform: translateX(-50%);
             z-index: 1;
+            top: 0;
         }
         .cover {
             display: none;
@@ -113,6 +203,16 @@
         }
         .button {
             text-align: center;
+        }
+    }
+    .maincoin__deccont {
+        .coindec {
+            &.coin_3 {
+                width: 20rem;
+                left: 0;
+                transform: translateX(-50%) !important;
+                bottom: 1.5rem;
+            }
         }
     }
 }
